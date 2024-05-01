@@ -1,17 +1,18 @@
-words = "Hello World, I'm Muhammad Ali"
+words = "Hello World I'm Muhammad Ali is"
 print(words)
 
-words.split(" ")
-
+myWords = words.split(" ")
 newWords = []
-r1 = "kdr"
-r2 = "cpr"
+for word in myWords:
+    if len(word) >= 3:
 
-stringNew = r1 + words[0:] + r2
-newWords.append(stringNew)
+        r1 = "kdr"
+        r2 = "cpr"
 
-codedString = " ".join(newWords)
-print(codedString)
+        stringNew = r1 + word[1:] + word[0] + r2
+        newWords.append(stringNew)
+    else:
+        newWords.append(word[::-1])
+print(" ".join(newWords))
 
-stringNew2 = codedString[3:-3]
-print(stringNew2)
+
